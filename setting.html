@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-800 text-white p-6 hidden md:block">
+            <h2 class="text-2xl font-bold mb-6">Dashboard</h2>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="ass1.2.html" class="hover:text-blue-400">🏠 Home</a></li>
+                    <li class="mb-4"><a href="analytics.html" class="hover:text-blue-400">📊 Analytics</a></li>
+                    <li class="mb-4"><a href="setting.html" class="hover:text-blue-400">⚙️ Settings</a></li>
+                    <li class="mb-4"><a href="message.html" class="hover:text-blue-400">📩 Messages</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Top Navbar -->
+            <header class="bg-white p-4 shadow flex justify-between items-center">
+                <button class="md:hidden text-gray-800" id="menu-btn">☰</button>
+                <h2 class="text-lg font-semibold">Settings</h2>
+            </header>
+
+            <!-- Settings Content -->
+            <main class="p-6">
+                <h3 class="text-2xl font-semibold mb-4">User Settings</h3>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <form>
+                        <label class="block text-lg font-semibold">Username</label>
+                        <input type="text" class="w-full p-3 border border-gray-300 rounded-lg mt-2" value="User123">
+
+                        <label class="block text-lg font-semibold mt-4">Email</label>
+                        <input type="email" class="w-full p-3 border border-gray-300 rounded-lg mt-2" value="user@example.com">
+
+                        <button type="submit" class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                            Save Changes
+                        </button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

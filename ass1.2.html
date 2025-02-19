@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard with Charts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-800 text-white p-6 hidden md:block">
+            <h2 class="text-2xl font-bold mb-6">Dashboard</h2>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="ass1.2.html" class="hover:text-blue-400">🏠 Home</a></li>
+                    <li class="mb-4"><a href="analytics.html" class="hover:text-blue-400">📊 Analytics</a></li>
+                    <li class="mb-4"><a href="setting.html" class="hover:text-blue-400">⚙️ Settings</a></li>
+                    <li class="mb-4"><a href="message.html" class="hover:text-blue-400">📩 Messages</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Top Navbar -->
+            <header class="bg-white p-4 shadow flex justify-between items-center">
+                <button class="md:hidden text-gray-800" id="menu-btn">☰</button>
+                <h2 class="text-lg font-semibold">Dashboard Overview</h2>
+                <div class="flex space-x-4">
+                    <span>🔔</span>
+                    <span>👤</span>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <main class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Stats Cards -->
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold">Total Users</h3>
+                        <p class="text-2xl font-bold">1,250</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold">Sales</h3>
+                        <p class="text-2xl font-bold">$8,900</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold">Visitors</h3>
+                        <p class="text-2xl font-bold">5,400</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold">Orders</h3>
+                        <p class="text-2xl font-bold">320</p>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <!-- Line Chart -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-4">Sales Overview</h3>
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                    <!-- Bar Chart -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-4">Monthly Users</h3>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.querySelector("aside").classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- Chart.js for Graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Line Chart (Sales Overview)
+        var ctx1 = document.getElementById("lineChart").getContext("2d");
+        var lineChart = new Chart(ctx1, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                datasets: [{
+                    label: "Sales ($)",
+                    data: [3000, 4000, 5000, 4500, 6000, 7000],
+                    borderColor: "blue",
+                    fill: false,
+                }]
+            }
+        });
+
+        // Bar Chart (Users Growth)
+        var ctx2 = document.getElementById("barChart").getContext("2d");
+        var barChart = new Chart(ctx2, {
+            type: "bar",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                datasets: [{
+                    label: "Users",
+                    data: [100, 200, 300, 250, 400, 450],
+                    backgroundColor: "purple"
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
