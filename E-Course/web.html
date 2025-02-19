@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Development Guide</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .content-section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content-section h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+        .content-section p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .links a:hover {
+            color: #2980b9;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Web Development Guide
+    </header>
+
+    <div class="container">
+        <div class="content-section">
+            <h2>What is Website Development?</h2>
+            <p>Website development involves creating, building, and maintaining websites. It includes a combination of different programming languages, frameworks, and tools that make web pages work, look attractive, and provide functionality to users. There are two main areas in web development: Frontend and Backend development.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Languages for Web Development</h2>
+            <p>Several programming languages are essential in web development. Here are the most common ones:</p>
+            <ul>
+                <li><strong>HTML</strong> - The structure of the webpage.</li>
+                <li><strong>CSS</strong> - The design and styling of the webpage.</li>
+                <li><strong>JavaScript</strong> - The functionality and interactivity.</li>
+                <li><strong>PHP</strong> - Server-side programming language for backend development.</li>
+                <li><strong>SQL</strong> - Used for database management and handling data.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Useful Resources to Learn Web Development</h2>
+            <p>There are many online platforms where you can learn web development. Some popular ones include:</p>
+            <ul class="links">
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - Comprehensive tutorials for beginners.</li>
+                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a> - Detailed documentation and guides.</li>
+                <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a> - Hands-on coding tutorials and projects.</li>
+                <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a> - Interactive learning environment.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>How Many Languages Do You Need to Develop a Web Application?</h2>
+            <p>Building a complete web application usually involves mastering both frontend and backend languages. Here's a basic structure of what you would need:</p>
+            <ul>
+                <li><strong>Frontend</strong> - HTML, CSS, JavaScript (often combined with libraries like React or frameworks like Angular or Vue).</li>
+                <li><strong>Backend</strong> - PHP, Python, Ruby, Node.js, etc.</li>
+                <li><strong>Database</strong> - SQL or NoSQL databases (e.g., MySQL, MongoDB).</li>
+                <li><strong>Version Control</strong> - Tools like Git to manage code and collaborate with others.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2024 Web Development Guide | Learn and Build!
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('.links a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                alert('You are about to visit ' + link.href);
+            });
+        });
+    </script>
+
+</body>
+</html>

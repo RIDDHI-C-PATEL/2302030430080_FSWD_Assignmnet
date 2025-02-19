@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about SEO and how to optimize your website for search engines.">
+    <meta name="keywords" content="SEO, Search Engine Optimization, Google, Ranking, Web Optimization">
+    <meta name="author" content="Your Name">
+    <title>SEO Tips & Tricks</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+            font-size: 2em;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            color: #4CAF50;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+        }
+        /* Button Style */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SEO Tips & Tricks</h1>
+</header>
+
+<div class="container">
+    <h2>What is SEO?</h2>
+    <p>Search Engine Optimization (SEO) is the practice of optimizing your website to rank higher in search engine results pages (SERPs). This improves the visibility of your website to users searching for relevant terms.</p>
+    
+    <h2>Why is SEO important?</h2>
+    <p>SEO helps in driving more traffic to your website organically (without paid ads). Higher ranking means more visitors, which can lead to better engagement and conversions.</p>
+
+    <h2>Useful SEO Resources</h2>
+    <ul>
+        <li><a href="https://moz.com/learn/seo" target="_blank">Moz - Beginner's Guide to SEO</a></li>
+        <li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank">Google's SEO Starter Guide</a></li>
+        <li><a href="https://ahrefs.com/blog/seo-basics/" target="_blank">Ahrefs - SEO Basics</a></li>
+        <li><a href="https://www.semrush.com/academy/courses/seo" target="_blank">SEMrush - Free SEO Courses</a></li>
+    </ul>
+
+    <h2>SEO Best Practices</h2>
+    <p>Here are some key SEO best practices to follow:</p>
+    <ul>
+        <li>Use descriptive and keyword-rich titles and meta descriptions.</li>
+        <li>Optimize images with alt text.</li>
+        <li>Ensure your website is mobile-friendly.</li>
+        <li>Improve page speed.</li>
+        <li>Use internal links to enhance navigation.</li>
+        <li>Create high-quality, engaging content.</li>
+        <li>Focus on acquiring high-quality backlinks.</li>
+    </ul>
+</div>
+
+<footer>
+    <p>Copyright © 2024 SEO Tips & Tricks | Designed by Your Name</p>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+<script>
+    // Show "Scroll to Top" button when user scrolls down
+    window.onscroll = function() {
+        var button = document.querySelector(".scroll-to-top");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
